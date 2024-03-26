@@ -187,7 +187,7 @@ async function handleRequest(request) {
 
     const html= await fetch(`https://cdn.jsdelivr.net/gh/${github_repo}${github_version}/index.html`)
     const text = (await html.text())
-        // .replaceAll("###GITHUB_REPO###", github_repo)
+        .replaceAll("###GITHUB_REPO###", github_repo)
         .replaceAll("###GITHUB_VERSION###", github_version)
         .replaceAll("###DEMO_NOTICE###", demo_notice)
     
